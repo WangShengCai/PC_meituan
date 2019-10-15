@@ -1,0 +1,158 @@
+a {
+  text-decoration: none;
+}
+
+.m-istyle {
+  margin-left: 20px;
+  margin-top : 40px;
+
+  dl {
+    height                 : 44px;
+    line-height            : 44px;
+    background-color       : rgb(190, 164, 116);
+    background-image       : linear-gradient(to right, rgb(194, 176, 142) 3%, rgb(190, 164, 116) 100%);
+    display                : flex;
+    box-sizing             : border-box;
+    font-size              : 14px;
+    color                  : #fff;
+    border-top-right-radius: 5px;
+    border-top-left-radius : 5px;
+    cursor                 : pointer;
+
+    &.iStyle {
+      background: linear-gradient(to right, rgb(194, 176, 142) 3%, rgb(190, 164, 116) 100%);
+    }
+
+    &.youhui {
+      background: linear-gradient(to right, rgb(255, 113, 74) 2%, rgb(252, 66, 66) 97%);
+    }
+
+
+    dt {
+      font-size   : 18px;
+      margin-left : 13px;
+      margin-right: 10px;
+      padding     : 0 5px;
+    }
+
+    dd {
+      padding : 0 5px;
+      position: relative;
+
+      &:after {
+        content              : "";
+        display              : block;
+        border-left          : 5px solid transparent;
+        border-right         : 5px solid transparent;
+        border-top           : 5px solid transparent;
+        border-bottom        : 7px solid #fff;
+        width                : 2px;
+        height               : 0;
+        position             : absolute;
+        top                  : 32px;
+        left                 : 0;
+        right                : 0;
+        margin               : auto;
+        display              : none;
+      }
+
+      &.active:after {
+        display: block;
+      }
+    }
+  }
+}
+
+.ibody {
+  display                   : flex;
+  list-style                : none;
+  flex-wrap                 : wrap;
+  width                     : 100%;
+  padding                   : 10px;
+  background-color          : #fff;
+  border-bottom-left-radius : 4px;
+  border-bottom-right-radius: 4px;
+  box-sizing                : border-box;
+  border                    : 1px solid #e5e5e5;
+  border-top                : none;
+
+  >li {
+    width     : 33.3%;
+    height    : 330px;
+    padding   : 5px 10px;
+    box-sizing: border-box;
+    background: #fff;
+    transition: background-color .5s;
+
+    // 图片卡片
+    .el-card {
+      width           : 100%;
+      height          : 100%;
+      border          : none;
+      background-color: transparent;
+
+      img {
+        max-width    : 100%;
+        width        : 100%;
+        height       : 208px;
+        margin-bottom: 10px;
+      }
+
+      .title {
+        font-size: 20px;
+        color    : #424242;
+        // 文本溢出打点显示
+        white-space  : nowrap;
+        overflow     : hidden;
+        text-overflow: ellipsis;
+      }
+
+      .sub-title {
+        font-size: 12px;
+        color    : #999;
+        margin   : 8px 0;
+        // 文本溢出打点显示
+        white-space  : nowrap;
+        overflow     : hidden;
+        text-overflow: ellipsis;
+      }
+
+      .current-price-wrapper {
+        font-size     : 20px;
+        color         : #BE9E4D;
+        margin-right  : 6px;
+        letter-spacing: -.8px;
+        font-weight   : bold;
+        margin-left   : 3px;
+
+        .price-symbol {
+          font-size  : 16px;
+          font-weight: lighter;
+        }
+      }
+
+      .old-price {
+        font-size      : 12px;
+        color          : #999;
+        text-decoration: line-through;
+      }
+
+      .address {
+        float    : right;
+        font-size: 12px;
+        color    : #999;
+        margin   : 10px 5px 0 0;
+      }
+
+      .ubits {
+        font-size: 14px;
+      }
+    }
+
+    &:hover {
+      background   : #F4F4F4;
+      transition   : background-color .5s;
+      border-radius: 4px;
+    }
+  }
+}
